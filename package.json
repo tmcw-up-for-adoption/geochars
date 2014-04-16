@@ -1,0 +1,21 @@
+{
+  "name": "geochars",
+  "version": "0.0.0",
+  "description": "a compact character encoding of geojson",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "keywords": [
+    "geographic",
+    "data",
+    "geojson"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "~1.4.5",
+    "polyline": "0.0.3",
+    "geojson-normalize": "0.0.0"
+  }
+}

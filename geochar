@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var concat = require('concat-stream'),
+    geochar = require('./');
+
+if (process.argv[2] === 'decode') {
+    process.stdin.pipe(concat(function(buffer) {
+        process.stdout.write(JSON.stringify(geochar.decode(buffer.toString())));
+    }));
+} else {
+    process.stdin.pipe(concat(function(buffer) {
+        var geojson = JSON.parse(buffer);
+        process.stdout.write(geochar.encode(geojson));
+    }));
+}
